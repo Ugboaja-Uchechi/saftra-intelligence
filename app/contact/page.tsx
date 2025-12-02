@@ -44,11 +44,15 @@ const Contact = () => {
       message: message,
     };
 
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID!;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY!;
+
     emailjs.send(
-      process.env.NEXT_PUBLIC_SERVICE_ID,
-      process.env.NEXT_PUBLIC_TEMPLATE_ID,
+      serviceId,
+      templateId,
       templateParams,
-      process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      publicKey
     ).then((response) => {
       console.log('Email sent successfully!', response);
       console.log(userDetails)
