@@ -203,11 +203,11 @@ const Header = () => {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <Link href="#" className="text-base font-medium text-black hover:text-gray-500">
+                    <Link href="/product" className="text-base font-medium text-black hover:text-gray-500">
                       Product
                     </Link>
 
-                    <Link href="#" className="text-base font-medium text-gray-900 hover:text-gray-500">
+                    <Link href="/about-us" className="text-base font-medium text-gray-900 hover:text-gray-500">
                       About
                     </Link>
                     <Link href="/contact" className="text-base font-medium text-gray-900 hover:text-gray-500">
