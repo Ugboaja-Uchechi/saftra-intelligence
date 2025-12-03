@@ -81,24 +81,24 @@ const features = [
 
 const Product = () => {
   return (
-    <section className='pb-20 pt-40 bg-background'>
+    <section className='pb-20 pt-30 md:pt-40 bg-background'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div>
-          <h2 className='text-[calc(1rem+2vw)] text-black mt-3 uppercase text-center'>The RFID + AI Platform Powering Visibility, Automation & Security Across Industries</h2>
-          <p className='text-xl text-gray-500 mb-8 text-center max-w-3xl mx-auto mt-3'>A modular, end-to-end system designed for demanding environments, combining hardware, software, AI, and analytics into a unified solution tailored to your needs.</p>
+          <h2 className='md:text-[calc(1rem+2vw)] text-base text-black mt-3 uppercase text-center'>The RFID + AI Platform Powering Visibility, Automation & Security Across Industries</h2>
+          <p className='md:text-xl text-[16px] text-gray-500 mb-8 text-center max-w-3xl mx-auto mt-3'>A modular, end-to-end system designed for demanding environments, combining hardware, software, AI, and analytics into a unified solution tailored to your needs.</p>
         </div>
-        <div className="grid grid-cols-4 gap-1.5">
+        <div className="grid md:grid-cols-4 gap-1.5">
           <div>
-            <Image src={WareHouse} alt='' className='max-h-100 h-full object-cover' />
+            <Image src={WareHouse} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
           </div>
           <div>
-            <Image src={Containers} alt='' className='max-h-100 h-full object-cover' />
+            <Image src={Containers} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
           </div>
           <div>
-            <Image src={Toll} alt='' className='max-h-100 h-full object-cover' />
+            <Image src={Toll} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
           </div>
           <div>
-            <Image src={ProdWare} alt='' className='max-h-100 h-full object-cover' />
+            <Image src={ProdWare} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
           </div>
         </div>
 

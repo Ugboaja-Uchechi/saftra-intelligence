@@ -57,3 +57,36 @@ video {
   z-index: -2;
 }
 
+.btns {
+  position: relative;
+  overflow: hidden;
+}
+
+.btns span {
+  transition: 1.25s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btns:hover .btn-text-one {
+  top: -100%;
+}
+
+.btns:hover .btn-text-two {
+  top: 50%;
+}
+

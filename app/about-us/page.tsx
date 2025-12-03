@@ -3,14 +3,14 @@ import { GoDotFill } from 'react-icons/go';
 
 const About = () => {
   return (
-    <section className='pb-20 pt-40 bg-background'>
+    <section className='pb-20 pt-30 md:pt-40 bg-background'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 items-start">
           <div>
             <p className='uppercase text-midnight text-sm'>
               Our Mission, Vission & Values
             </p>
-            <h2 className='text-[calc(2rem+2vw)] text-black uppercase'>
+            <h2 className='text-[calc(2rem+2vw)]  text-black uppercase'>
               What Drives Us
             </h2>
             <p className='text-gray-500 text-lg'><span className='text-black'>Saftra Intelligence</span>  is an African technology company pioneering AI-powered RFID and IoT systems for real-time tracking, automation, and intelligent decision-making across key industries.</p>
@@ -54,24 +54,24 @@ const About = () => {
                   Values
                 </h3>
                 <ul className='flex flex-col mt-2 gap-4'>
-                  <li className='flex items-center gap-1 text-lg text-gray-500'>
-                    <GoDotFill className='text-[#F94006]' />
+                  <li className='flex items-center gap-2 text-lg text-gray-500'>
+                    <GoDotFill className='text-[#F94006] w-3 h-3 shrink-0' />
                     <p>Security: Data protection and encryption at every layer.</p>
                   </li>
-                  <li className='flex items-center gap-1 text-lg text-gray-500'>
-                    <GoDotFill className='text-[#F94006]' />
+                  <li className='flex items-center gap-2 text-lg text-gray-500'>
+                    <GoDotFill className='text-[#F94006] w-3 h-3 shrink-0' />
                     <p>Reliability: Works in tough weather, heavy traffic, dust, heat, and high-volume environments.</p>
                   </li>
-                  <li className='flex items-center gap-1 text-lg text-gray-500'>
-                    <GoDotFill className='text-[#F94006]' />
+                  <li className='flex items-center gap-2 text-lg text-gray-500'>
+                    <GoDotFill className='text-[#F94006] w-3 h-3 shrink-0' />
                     <p>Accuracy: Zero compromises in identification.</p>
                   </li>
-                  <li className='flex items-center gap-1 text-lg text-gray-500'>
-                    <GoDotFill className='text-[#F94006]' />
+                  <li className='flex items-center gap-2 text-lg text-gray-500'>
+                    <GoDotFill className='text-[#F94006] w-3 h-3 shrink-0' />
                     <p>Scalability: Built for nations and enterprise-level operations.</p>
                   </li>
-                  <li className='flex items-center gap-1 text-lg text-gray-500'>
-                    <GoDotFill className='text-[#F94006]' />
+                  <li className='flex items-center gap-2 text-lg text-gray-500'>
+                    <GoDotFill className='text-[#F94006] w-3 h-3 shrink-0' />
                     <p>Impact: Solving real, systemic challenges in fast-growing cities and industries.</p>
                   </li>
                 </ul>

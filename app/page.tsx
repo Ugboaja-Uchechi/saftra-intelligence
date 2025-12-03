@@ -6,7 +6,7 @@ import ProblemSolve from "./_components/ProblemSolve";
 export default function Home() {
   return (
     <>
-      <div className="h-screen hero">
+      <div className="h-screen hero -z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           {/* Hero Section Start */}
           <video width="320" height="240" autoPlay muted loop>
@@ -20,7 +20,7 @@ export default function Home() {
               AI-Driven RFID Infrastructure for Real-Time Identification, Tracking & Operational Intelligence
             </h1>
 
-            <p className="text-[calc(.55rem+.75vw)] text-white max-w-2xl ">
+            <p className="lg:text-[calc(.55rem+.75vw)] text-lg text-white lg:max-w-2xl ">
               We build secure, high-accuracy RFID + AI systems that deliver end-to-end visibility, automated compliance, and operational efficiency across transportation, logistics, healthcare, cities, and mission-critical environments.
             </p>
           </div>

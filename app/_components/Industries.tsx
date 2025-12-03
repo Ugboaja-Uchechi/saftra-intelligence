@@ -65,18 +65,24 @@ const Industries = () => {
 
         <div className=' bg-border p-6 rounded-lg'>
           <p className='text-lg text-black mb-4 max-w-xl'>Our unified RFID + AI platform adapts to multiple sectors, delivering accurate identification, real-time tracking, automated security, and actionable data intelligence.</p>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
+          <div className="grid sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
             {verticals.map((vertical, index) => (
               <div key={index} className='border border-white bg-background  rounded-xl'>
                 <div className='flex flex-col gap-3 py-8 px-3'>
-                  <h2 className='text-[calc(.75rem+.75vw)] text-black'>{vertical?.name}</h2>
-                  <p className='text-[calc(.35rem+.75vw)] text-gray-700'>{vertical?.subText}</p>
+                  <h2 className='text-2xl text-black'>{vertical?.name}</h2>
+                  <p className='text-base text-gray-700'>{vertical?.subText}</p>
                   <Link
                     href={vertical?.link}
                     target='_blank'
-                    className='text-[calc(.25rem+.75vw)] text-gray-700'
+                    className='text-[0.95rem] cursor-pointer btns h-[52px]'
                   >
-                    Let&apos;s work together
+                    <span className="text-gray-700 btn-text-one">
+                      Let&apos;s work together
+                    </span>
+                    <span className="text-gray-700 btn-text-two">
+                      Let&apos;s work together
+                    </span>
+                  
                   </Link>
 
                 </div>

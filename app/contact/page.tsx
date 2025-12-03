@@ -89,7 +89,7 @@ const Contact = () => {
   return (
     <div className='pt-6 pb-20 bg-background'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <main className="flex flex-col lg:flex-row items-center justify-between gap-5 mt-40 rounded-xs lg:mb-0 mb-16">
+        <main className="flex flex-col lg:flex-row items-center justify-between gap-5 mt-30 md:mt-40 rounded-xs lg:mb-0 mb-16">
           <form
             action=""
             className="max-w-[700px] w-full border border-border bg-midnight rounded-2xl md:p-12 p-6"

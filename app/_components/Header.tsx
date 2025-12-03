@@ -5,7 +5,7 @@ import { Fragment } from 'react'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel, Transition } from '@headlessui/react'
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDownIcon, ChartBarIcon, CursorArrowRippleIcon, ShieldCheckIcon, ArrowPathIcon, ChatBubbleLeftEllipsisIcon, BookmarkSquareIcon, CalendarIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
+import { ChevronDownIcon, ChartBarIcon, CursorArrowRippleIcon, ShieldCheckIcon, ArrowPathIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import { useRouter } from 'next/navigation';
 
 
@@ -56,23 +56,16 @@ const Header = () => {
   }
 
   return (
-    <header>
-      <nav>
-
-        <Popover className="relative">
+<header>
+  <nav>
+    <Popover className="relative">
+      {({ close }) => (
+        <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 w-[inherit] mt-6 block fixed inset-0 z-50 pointer-events-none">
             <div className="flex justify-between items-center border border-border rounded-b-2xl bg-foreground p-6 md:justify-start md:space-x-10 pointer-events-auto">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link href="/">
                   <span className="sr-only">Home</span>
-                  {/* Logo */}
-                  {/* <Image
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-                width={20}
-                height={20}
-              /> */}
                 </Link>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
@@ -83,19 +76,28 @@ const Header = () => {
               </div>
               <PopoverGroup as="nav" className="hidden md:flex space-x-10">
                 <Popover className="relative">
-                  {({ open }) => (
+                  {({ open, close: closeDropdown }) => (
                     <>
+                      {/* Backdrop overlay when dropdown is open */}
+                      {open && (
+                        <div
+                          className="fixed inset-0 z-[5] pointer-events-auto"
+                          onClick={() => closeDropdown()}
+                          aria-hidden="true"
+                        />
+                      )}
+
                       <PopoverButton
                         className={`
-                      ${open} ? 'text-gray-500' : 'text-black',
-                      'group  inline-flex items-center text-base font-medium hover:text-gray-500 focus:outline-none cursor-pointer'
+                      ${open ? 'text-gray-500' : 'text-black'}
+                      group inline-flex items-center text-base font-medium hover:text-gray-500 focus:outline-none cursor-pointer relative z-10
                     `}
                       >
                         <span className='cursor-pointer text-base'>Solutions</span>
                         <ChevronDownIcon
                           className={`
-                        ${open} ? 'text-gray-500' : 'text-black',
-                        'ml-2 h-5 w-5 group-hover:text-gray-500' cursor-pointer
+                        ${open ? 'text-gray-500' : 'text-black'}
+                        ml-2 h-5 w-5 group-hover:text-gray-500 cursor-pointer
                       `}
                           aria-hidden="true"
                         />
@@ -118,6 +120,7 @@ const Header = () => {
                                   key={item.name}
                                   href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                  onClick={() => closeDropdown()}
                                 >
                                   <item.icon className="shrink-0 h-6 w-6 text-blue" aria-hidden="true" />
                                   <div className="ml-4">
@@ -127,7 +130,6 @@ const Header = () => {
                                 </Link>
                               ))}
                             </div>
-
                           </div>
                         </PopoverPanel>
                       </Transition>
@@ -148,7 +150,8 @@ const Header = () => {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <p className="text-base font-medium text-black">Interested?</p>
                 <button
-                  className="ml-4 whitespace-nowrap inline-flex items-center justify-center lg:px-12 lg:py-3 px-2 py-4 border border-transparent rounded-md lg:rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out" onClick={joinWaitlistNav}
+                  className="ml-4 whitespace-nowrap inline-flex items-center justify-center lg:px-12 lg:py-3 px-2 py-4 border border-transparent rounded-md lg:rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
+                  onClick={joinWaitlistNav}
                 >
                   Join Waitlist
                 </button>
@@ -165,20 +168,11 @@ const Header = () => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <PopoverPanel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-border">
+            <PopoverPanel focus className="fixed top-0 inset-x-0 p-2 z-[60] transition transform origin-top-right md:hidden">
+              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-border max-h-screen overflow-y-auto">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
-                    <div>
-                      {/* Logo */}
-                      {/* <Image
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
-                    width={20}
-                    height={20}
-                  /> */}
-                    </div>
+                    <div></div>
                     <div className="-mr-2">
                       <PopoverButton className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-black hover:text-gray-500 hover:bg-background outline-none">
                         <span className="sr-only">Close menu</span>
@@ -193,6 +187,7 @@ const Header = () => {
                           key={item.name}
                           href={item.href}
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                          onClick={() => close()}
                         >
                           <item.icon className="shrink-0 h-6 w-6 text-blue" aria-hidden="true" />
                           <span className="ml-3 text-base font-medium text-black">{item.name}</span>
@@ -203,22 +198,36 @@ const Header = () => {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <Link href="/product" className="text-base font-medium text-black hover:text-gray-500">
+                    <Link 
+                      href="/product" 
+                      className="text-base font-medium text-black hover:text-gray-500"
+                      onClick={() => close()}
+                    >
                       Product
                     </Link>
-
-                    <Link href="/about-us" className="text-base font-medium text-gray-900 hover:text-gray-500">
+                    <Link 
+                      href="/about-us" 
+                      className="text-base font-medium text-gray-900 hover:text-gray-500"
+                      onClick={() => close()}
+                    >
                       About
                     </Link>
-                    <Link href="/contact" className="text-base font-medium text-gray-900 hover:text-gray-500">
+                    <Link 
+                      href="/contact" 
+                      className="text-base font-medium text-gray-900 hover:text-gray-500"
+                      onClick={() => close()}
+                    >
                       Contact
                     </Link>
                   </div>
                   <div>
                     <p className="text-lg font-medium text-black">Interested?</p>
                     <button
-                      className="whitespace-nowrap inline-flex items-center justify-center px-12 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
-                      onClick={joinWaitlistNav}
+                      className="w-full mt-2 whitespace-nowrap inline-flex items-center justify-center px-12 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
+                      onClick={() => {
+                        joinWaitlistNav();
+                        close();
+                      }}
                     >
                       Join Waitlist
                     </button>
@@ -227,10 +236,11 @@ const Header = () => {
               </div>
             </PopoverPanel>
           </Transition>
-        </Popover>
-
-      </nav>
-    </header>
+        </>
+      )}
+    </Popover>
+  </nav>
+</header>
   )
 }
 
