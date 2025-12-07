@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import solutions from '@/data/solutions';
 
 
-function ScrollLock({ isOpen }) {
+function ScrollLock({ isOpen }: { isOpen: boolean }) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
