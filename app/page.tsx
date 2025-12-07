@@ -2,6 +2,13 @@
 
 import Industries from "./_components/Industries";
 import ProblemSolve from "./_components/ProblemSolve";
+import { Big_Shoulders } from 'next/font/google';
+
+const bigShoulders = Big_Shoulders({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+});
+
 
 export default function Home() {
   return (
@@ -16,7 +23,7 @@ export default function Home() {
           </video>
 
           <div className="h-full flex flex-col justify-center pt-52">
-            <h1 className="max-w-3xl mb-10 text-white text-[calc(1rem+1.5vw)]">
+            <h1 className={`max-w-3xl mb-10 text-white text-[calc(1rem+1.5vw)] ${bigShoulders.className}`}>
               AI-Driven RFID Infrastructure for Real-Time Identification, Tracking & Operational Intelligence
             </h1>
 

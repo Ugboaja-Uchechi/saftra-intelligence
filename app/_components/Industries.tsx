@@ -8,7 +8,14 @@ import Pharmaceuticals from "../../public/assets/pharmacy.jpg"
 import Construction from "../../public/assets/construction.jpg"
 import Image from 'next/image'
 import solutions from '@/data/solutions'
-import { ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { Big_Shoulders } from 'next/font/google';
+
+const bigShoulders = Big_Shoulders({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+});
+
 
 const verticals = [
   {
@@ -60,10 +67,10 @@ const Industries = () => {
   return (
     <section className='py-6 bg-background'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className='text-[calc(2rem+2vw)] text-black mt-3 uppercase'>
+        <h2 className={`text-[calc(2rem+2vw)] text-black mt-3 uppercase ${bigShoulders.className}`}>
           Industries
         </h2>
-        <p className='text-base text-midnight mb-8'>One platform, endless Possibilities tailored to your industry.</p>
+        <p className='text-lg text-midnight mb-8'>One platform, endless possibilities tailored to your industry.</p>
 
         <div className=' bg-border p-6 rounded-lg'>
           <p className='text-lg text-black mb-4 max-w-xl'>Our unified RFID + AI platform adapts to multiple sectors, delivering accurate identification, real-time tracking, automated security, and actionable data intelligence.</p>
@@ -71,7 +78,7 @@ const Industries = () => {
             {verticals.map((vertical, index) => (
               <div key={index} className='border border-white bg-background  rounded-xl'>
                 <div className='flex flex-col gap-3 py-8 px-3'>
-                  <h2 className='text-[1.4rem] text-blue/85'>{vertical?.name}</h2>
+                  <h2 className={`text-3xl text-blue/85 ${bigShoulders.className}`}>{vertical?.name}</h2>
                   <p className='text-base text-gray-700'>{vertical?.subText}</p>
                   {solutions.map((solution) => (
                     <Link

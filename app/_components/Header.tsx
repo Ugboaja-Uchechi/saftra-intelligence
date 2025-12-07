@@ -4,10 +4,15 @@ import { Fragment, useEffect } from 'react'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel, Transition } from '@headlessui/react'
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDownIcon, ChartBarIcon, CursorArrowRippleIcon, ShieldCheckIcon, ArrowPathIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
+import { ChevronDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import { useRouter } from 'next/navigation';
 import solutions from '@/data/solutions';
+import { Big_Shoulders } from 'next/font/google';
 
+const bigShoulders = Big_Shoulders({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+});
 
 function ScrollLock({ isOpen }: { isOpen: boolean }) {
   useEffect(() => {
@@ -40,27 +45,27 @@ const Header = () => {
               <ScrollLock isOpen={open} />
 
               <div className="max-w-7xl mx-auto px-4 sm:px-6 w-[inherit] mt-3 block fixed inset-0 z-50 pointer-events-none">
-                <div className="flex justify-between items-center border border-border rounded-b-2xl bg-foreground p-6 md:justify-start md:space-x-10 pointer-events-auto">
+                <div className="flex justify-between items-center border border-border rounded-b-2xl bg-foreground p-6 lg:justify-start lg:space-x-10 pointer-events-auto">
                   <div className="flex justify-start lg:w-0 lg:flex-1">
                     <Link href="/">
-                      <h1>Saftra Intelligence</h1>
+                      <h1 className={`${bigShoulders.className} text-xl lg:text-3xl hover:text-gray-500`}>Saftra Intelligence</h1>
                       <span className="sr-only">Home</span>
                     </Link>
                   </div>
-                  <div className="-mr-2 -my-2 md:hidden">
+                  <div className="-mr-2 -my-2 lg:hidden">
                     <PopoverButton className="rounded-md p-2 inline-flex items-center justify-center text-black hover:text-black/50 hover:bg-gray-100 focus:outline-none">
                       <span className="sr-only">Open menu</span>
                       <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </PopoverButton>
                   </div>
-                  <PopoverGroup as="nav" className="hidden md:flex space-x-10">
+                  <PopoverGroup as="nav" className="hidden lg:flex space-x-10">
                     <Popover className="relative">
                       {({ open, close: closeDropdown }) => (
                         <>
                           {/* Backdrop overlay when dropdown is open */}
                           {open && (
                             <div
-                              className="fixed inset-0 z-[5] pointer-events-auto"
+                              className="fixed inset-0 z-5 pointer-events-auto"
                               onClick={() => closeDropdown()}
                               aria-hidden="true"
                             />
@@ -125,7 +130,7 @@ const Header = () => {
                       Contact
                     </Link>
                   </PopoverGroup>
-                  <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                  <div className="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
                     <p className="text-base font-medium text-black">Interested?</p>
                     <button
                       className="ml-4 whitespace-nowrap inline-flex items-center justify-center lg:px-12 lg:py-3 px-2 py-4 border border-transparent rounded-md lg:rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
@@ -146,14 +151,15 @@ const Header = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <PopoverPanel focus className="fixed top-0 inset-x-0 p-2 z-60 transition transform origin-top-right md:hidden">
+                <PopoverPanel focus className="fixed top-0 inset-x-0 p-2 z-60 transition transform origin-top-right lg:hidden">
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-border max-h-screen overflow-y-auto">
                     <div className="pt-5 pb-6 px-5">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h1>
-                            Saftra Intelligence
-                          </h1>
+                          <Link href="/">
+                            <h1 className={`${bigShoulders.className} text-xl outline-none`}>Saftra Intelligence</h1>
+                            <span className="sr-only">Home</span>
+                          </Link>
                         </div>
                         <div className="-mr-2">
                           <PopoverButton className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-black hover:text-gray-500 hover:bg-background outline-none">
@@ -202,7 +208,6 @@ const Header = () => {
                         </Link>
                       </div>
                       <div>
-                        <p className="text-lg font-medium text-black">Interested?</p>
                         <button
                           className="w-full mt-2 whitespace-nowrap inline-flex items-center justify-center px-12 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
                           onClick={() => {

@@ -5,7 +5,12 @@ import { Metadata } from "next";
 import solutions from '@/data/solutions';
 import { LuMail } from "react-icons/lu";
 import { GoDotFill } from "react-icons/go";
+import { Big_Shoulders } from 'next/font/google';
 
+const bigShoulders = Big_Shoulders({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+});
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -58,7 +63,7 @@ export default async function SolutionPage({ params }: Props) {
           <div className="mb-12 relative z-10">
             <div className="flex flex-col justify-center h-screen lg:h-[70vh] max-w-7xl mx-auto gap-x-4 px-4 pt-16">
               <div>
-                <h1 className="text-2xl md:text-4xl font-bold text-foreground">{current?.name}</h1>
+                <h1 className={`text-2xl md:text-4xl font-bold text-foreground ${bigShoulders.className}`}>{current?.name}</h1>
                 <h3 className="text-foreground my-4 text-xl">{current?.headline}</h3>
                 <p className="mt-2 text-foreground max-w-2xl text-base">{current?.description}</p>
 
@@ -75,7 +80,7 @@ export default async function SolutionPage({ params }: Props) {
             <div>
               <div>
                 <div>
-                  <h2 className="text-2xl md:text-4xl font-medium mb-2 text-black">Challenges</h2>
+                  <h2 className={`text-2xl md:text-4xl mb-2 text-black ${bigShoulders.className}`}>Challenges</h2>
                   <h3 className="text-black text-lg md:text-2xl mb-3">{current.challenge?.title}</h3>
                 </div>
                 <div>
@@ -94,7 +99,7 @@ export default async function SolutionPage({ params }: Props) {
             </div>
 
             <div className="my-10">
-              <h2 className="text-2xl md:text-4xl font-semibold mb-2 text-black">
+              <h2 className={`text-2xl md:text-4xl mb-2 text-black ${bigShoulders.className}`}>
                 Solution
               </h2>
               <h3 className="text-black text-lg md:text-2xl">
@@ -110,7 +115,7 @@ export default async function SolutionPage({ params }: Props) {
             </div>
 
             <div>
-              <h2 className="text-2xl md:text-4xl font-medium mb-4 text-black">
+              <h2 className={`text-2xl md:text-4xl mb-4 text-black ${bigShoulders.className}`}>
                 Core Features
               </h2>
 
@@ -126,7 +131,7 @@ export default async function SolutionPage({ params }: Props) {
 
             <div className="mt-10 grid lg:grid-cols-2 gap-4">
               <div>
-                <h2 className="text-2xl md:text-4xl font-medium mb-4 text-black">
+                <h2 className={`text-2xl md:text-4xl mb-4 text-black ${bigShoulders.className}`}>
                   Use Cases
                 </h2>
                 <div className="rounded-lg hover:shadow transition transform bg-white p-6">
@@ -140,7 +145,7 @@ export default async function SolutionPage({ params }: Props) {
               </div>
 
               <div>
-                <h2 className="text-2xl md:text-4xl font-medium mb-4 text-black">
+                <h2 className={`text-2xl md:text-4xl mb-4 text-black ${bigShoulders.className}`}>
                   Why Choose Us
                 </h2>
                 <div className="rounded-lg hover:shadow transition transform bg-white p-6">
@@ -172,7 +177,7 @@ export default async function SolutionPage({ params }: Props) {
         {/* Other Solutions */}
         <section className="mt-16">
           <div className="flex items-center justify-between">
-            <h3 className="text-2xl md:text-4xl">Explore other solutions</h3>
+            <h3 className={`text-2xl md:text-4xl text-black capitalize  ${bigShoulders.className}`}>Explore other solutions</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">

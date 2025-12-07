@@ -1,6 +1,12 @@
 "use client"
 import Link from "next/link"
 import { useRouter } from "next/navigation";
+import { Big_Shoulders } from 'next/font/google';
+
+const bigShoulders = Big_Shoulders({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+});
 
 const navigation = {
   solutions: [
@@ -38,7 +44,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="grid gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-background tracking-wider uppercase">Solutions</h3>
+                <h3 className={`text-lg font-semibold text-background tracking-wider uppercase ${bigShoulders.className}`}>Solutions</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
@@ -52,7 +58,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-background tracking-wider uppercase">Company</h3>
+                <h3 className={`text-lg font-semibold text-background tracking-wider uppercase ${bigShoulders.className}`}>Company</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -64,7 +70,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-background tracking-wider uppercase">Legal</h3>
+                <h3 className={`text-lg font-semibold text-background tracking-wider uppercase ${bigShoulders.className}`}>Legal</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
@@ -78,7 +84,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-8 xl:mt-0">
-            <h3 className="text-sm font-semibold text-background tracking-wider uppercase">
+            <h3 className={`text-lg font-semibold text-background tracking-wider uppercase ${bigShoulders.className}`}>
               Interested?
             </h3>
             <p className="mt-4 text-base text-foreground">

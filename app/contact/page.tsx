@@ -3,8 +3,14 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
-import email from "../../public/assets/Email.svg"
+import email from "../../public/assets/Email.svg";
 import Image from 'next/image';
+import { Big_Shoulders } from 'next/font/google';
+
+const bigShoulders = Big_Shoulders({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+});
 
 const Contact = () => {
   const [userDetails, setUserDetails] = useState({
@@ -95,7 +101,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
             ref={formRef}
           >
-            <h4 className='text-[calc(2rem+2vw)] text-foreground uppercase font-normal '>Contact</h4>
+            <h4 className={`${bigShoulders.className} text-[calc(2rem+2vw)] text-foreground uppercase font-normal`}>Contact</h4>
             <h2 className='text-foreground text-5xl font-light '>Let&apos;s get in touch.</h2>
 
             <div className="mt-8 py-5">
