@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const ProblemSolve = () => {
   return (
-    <section className='py-6 bg-background'>
+    <section className='py-6 bg-blue/15'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className='text-[calc(2rem+2vw)] text-black mt-3'>Problems We Solve</h2>
         <p className='text-base text-midnight mb-8'>Solving the Visibility & Reliability Gap Across Critical Industries</p>

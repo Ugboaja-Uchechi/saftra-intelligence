@@ -112,7 +112,7 @@ const Product = () => {
                   <div className="flow-root rounded-lg bg-background px-6 pb-8 h-full">
                     <div className="-mt-6">
                       <div>
-                        <span className="inline-flex items-center justify-center rounded-md bg-blue/90 p-3 shadow-lg">
+                        <span className="inline-flex items-center justify-center rounded-md bg-blue/70 p-3 shadow-lg">
                           <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                         </span>
                       </div>
@@ -120,7 +120,7 @@ const Product = () => {
                       <p className="mt-5 text-base text-gray-500">{feature.description}</p>
                       <ul className='mt-4'>
                         {feature.list.map((item, index) => (
-                          <li key={index} className="text-gray-400 text-sm flex gap-2 items-center">
+                          <li key={index} className="text-gray-700 text-sm flex gap-2 items-center">
                             <GoDotFill className='text-blue' />
                             <span>{item}</span>
                           </li>

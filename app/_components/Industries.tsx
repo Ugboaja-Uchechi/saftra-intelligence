@@ -7,6 +7,8 @@ import Security from "../../public/assets/security.jpg"
 import Pharmaceuticals from "../../public/assets/pharmacy.jpg"
 import Construction from "../../public/assets/construction.jpg"
 import Image from 'next/image'
+import solutions from '@/data/solutions'
+import { ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const verticals = [
   {
@@ -17,11 +19,11 @@ const verticals = [
     // icon: TruckIcon,
   },
   {
-    name: "Smart Cities & Tolling",
-    subText: "RFID + AI powering automated tolling, traffic visibility, urban mobility analytics, secure permitting, congestion management, and revenue assurance.",
-    img: Toll,
-    link: "",
-    // icon: "",
+    name: "Construction & Heavy Equipments",
+    subText: "Track heavy machinery, validate operator access, prevent equipment theft, and automate site-level asset movements for improved safety and uptime across construction and industrial sites.",
+    img: Construction,
+    link: "/",
+    // icon: TruckIcon,
   },
   {
     name: "Military & Security",
@@ -31,25 +33,25 @@ const verticals = [
     //icon: FaWarehouse,
   },
   {
+    name: "Healthcare & Pharmaceuticals",
+    subText: "End-to-end visibility of pharmaceuticals, medical equipments, ambulances, and supply chain integrity. Protect against counterfeits and ensure compliance",
+    img: Pharmaceuticals,
+    link: "",
+    //icon: "",
+  },
+  {
+    name: "Smart Cities & Tolling",
+    subText: "RFID + AI powering automated tolling, traffic visibility, urban mobility analytics, secure permitting, congestion management, and revenue assurance.",
+    img: Toll,
+    link: "",
+    // icon: "",
+  },
+  {
     name: "Retail, Warehouse & Supply Chain",
     subText: "Track inventory, automate warehouse flows, monitor pallet and container movements, reduce shrinkage, and maintain real-time data accuracy across the entire supply chain and network.",
     img: WareHouse,
     link: "/",
     // icon: FaWarehouse,
-  },
-  {
-    name: "Construction & Heavy Equipments",
-    subText: "Track heavy machinery, validate operator access, prevent equipment theft, and automate site-level asset movements for improved safety and uptime across construction and industrial sites.",
-    img: Construction,
-    link: "/",
-    // icon: TruckIcon,
-  },
-  {
-    name: "Healthcare & Pharmaceuticals",
-    subText: "End-to-end visibility of pharmaceuticals, medical equipment, ambulances, and supply chain integrity. Protect against counterfeits, ensure compliance, and maintain chain-of-custody.",
-    img: Pharmaceuticals,
-    link: "",
-    //icon: "",
   },
 
 ]
@@ -69,24 +71,29 @@ const Industries = () => {
             {verticals.map((vertical, index) => (
               <div key={index} className='border border-white bg-background  rounded-xl'>
                 <div className='flex flex-col gap-3 py-8 px-3'>
-                  <h2 className='text-2xl text-black'>{vertical?.name}</h2>
+                  <h2 className='text-[1.4rem] text-blue/85'>{vertical?.name}</h2>
                   <p className='text-base text-gray-700'>{vertical?.subText}</p>
-                  <Link
-                    href={vertical?.link}
-                    target='_blank'
-                    className='text-[0.95rem] cursor-pointer btns h-[52px]'
-                  >
-                    <span className="text-gray-700 btn-text-one">
-                      Let&apos;s work together
-                    </span>
-                    <span className="text-gray-700 btn-text-two">
-                      Let&apos;s work together
-                    </span>
-                  
-                  </Link>
+                  {solutions.map((solution) => (
+                    <Link
+                      key={solution.slug} href={solution.href}
+                      className='text-[0.95rem] cursor-pointer btns h-7'
+                    >
+                      <span className="text-gray-700 btn-text-one">
+                        Let&apos;s work together
+                        <ArrowUpRightIcon className='h-4 w-4 ml-1 inline-block' />
+                      </span>
+                      <span className="text-blue btn-text-two">
+                        Let&apos;s work together
+                        <ArrowRightIcon className='h-4 w-4 ml-1 inline-block' />
+                      </span>
+
+                    </Link>
+                  )).slice(index, index + 1)
+                  }
+
 
                 </div>
-                <Image src={vertical?.img} alt={vertical?.name} className='w-full h-full max-h-44 object-cover rounded-b-xl' />
+                <Image src={vertical?.img} alt={vertical?.name} className='w-full h-full sm:max-h-44 max-h-32 object-cover rounded-b-xl' />
               </div>
             ))}
           </div>

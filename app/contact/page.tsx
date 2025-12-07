@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import email from "../../public/assets/Email.svg"
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Contact = () => {
   const [userDetails, setUserDetails] = useState({
@@ -183,7 +182,7 @@ const Contact = () => {
             <div className="w-full flex flex-col justify-center">
               <div className="border border-border bg-midnight p-6  rounded-[20px] flex items-center rounded-20 gap-4 cursor-pointer hover:shadow-sm hover:shadow-foreground/10 transition duration-150 ease-in-out">
                 <div className="rounded-full h-[76px] w-[76px] flex items-center justify-center ml-3">
-                  <Link
+                  <a
                     href="mailto:saftraintelligence@gmail.com"
                     target="_blank"
                     rel="noreferrer"
@@ -193,29 +192,29 @@ const Contact = () => {
                       alt="icon"
                       className="h-[76px] w-[76px] rounded-full"
                     />
-                  </Link>
+                  </a>
                 </div>
 
                 <div className="gap-4">
                   <h3 className="font-bold text-[26px] leading-8 tracking-[0.5px]">
-                    <Link
+                    <a
                       href="mailto:saftraintelligence@gmail.com"
                       target="_blank"
                       rel="noreferrer"
                       className="text-foreground/60"
                     >
                       Email
-                    </Link>
+                    </a>
                   </h3>
                   <p className="text-base text-foreground">
-                    <Link
+                    <a
                       href="mailto:saftraintelligence@gmail.com"
                       target="_blank"
                       rel="noreferrer"
                       className=""
                     >
                       Send us a mail
-                    </Link>
+                    </a>
                   </p>
                 </div>
               </div>
