@@ -118,7 +118,7 @@ export const solutions: Solution[] = [
   {
     name: "Construction & Heavy Equipment",
     headline: "Track Heavy Equipment, Secure Job Sites, and Prevent Asset Loss with RFID + AI",
-    description: "Gain full visibility into machinery, tools, and operator access—reducing theft, downtime, and safety risks across construction and industrial sites.",
+    description: "Gain full visibility into machinery, tools, and operator access, reducing theft, downtime, and safety risks across construction and industrial sites.",
     challenge: {
       title: "Construction sites face frequent operational losses due to:",
       points: [
@@ -133,7 +133,7 @@ export const solutions: Solution[] = [
     solution: {
       title: "RFID + AI for Full-Site Asset Intelligence",
       points: [
-        "We provide a unified platform to track heavy equipment, vehicles, tools, and worker access in real time—boosting safety, efficiency, and accountability.",
+        "We provide a unified platform to track heavy equipment, vehicles, tools, and worker access in real time, boosting safety, efficiency, and accountability.",
       ]
     },
     coreFeatures: [

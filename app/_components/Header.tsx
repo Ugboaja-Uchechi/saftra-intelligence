@@ -43,6 +43,7 @@ const Header = () => {
                 <div className="flex justify-between items-center border border-border rounded-b-2xl bg-foreground p-6 md:justify-start md:space-x-10 pointer-events-auto">
                   <div className="flex justify-start lg:w-0 lg:flex-1">
                     <Link href="/">
+                      <h1>Saftra Intelligence</h1>
                       <span className="sr-only">Home</span>
                     </Link>
                   </div>
@@ -145,11 +146,15 @@ const Header = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <PopoverPanel focus className="fixed top-0 inset-x-0 p-2 z-[60] transition transform origin-top-right md:hidden">
+                <PopoverPanel focus className="fixed top-0 inset-x-0 p-2 z-60 transition transform origin-top-right md:hidden">
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-border max-h-screen overflow-y-auto">
                     <div className="pt-5 pb-6 px-5">
                       <div className="flex items-center justify-between">
-                        <div></div>
+                        <div>
+                          <h1>
+                            Saftra Intelligence
+                          </h1>
+                        </div>
                         <div className="-mr-2">
                           <PopoverButton className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-black hover:text-gray-500 hover:bg-background outline-none">
                             <span className="sr-only">Close menu</span>
