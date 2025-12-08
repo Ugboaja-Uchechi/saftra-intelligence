@@ -5,6 +5,13 @@ import Toll from "../../public/assets/toll.jpg"
 import Containers from "../../public/assets/product-container.jpg"
 import Image from 'next/image';
 import { ShieldCheckIcon, LockClosedIcon, CloudArrowUpIcon, CogIcon, ServerIcon, QueueListIcon } from '@heroicons/react/20/solid';
+import { IoHardwareChip } from "react-icons/io5";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { MdSpaceDashboard } from "react-icons/md";
+import { FaBrain } from "react-icons/fa6";
+import { IoIosApps } from "react-icons/io";
+import { SiSimpleanalytics } from "react-icons/si";
+import { MdIntegrationInstructions } from "react-icons/md";
 import { GoDotFill } from 'react-icons/go';
 import { Big_Shoulders } from 'next/font/google';
 
@@ -21,7 +28,7 @@ const features = [
     list: [
       
     ],
-    icon: CloudArrowUpIcon,
+    icon: IoHardwareChip,
   },
   {
     name: 'AI Identification Engine',
@@ -29,7 +36,7 @@ const features = [
     list: [
       
     ],
-    icon: LockClosedIcon,
+    icon: GiArtificialIntelligence,
   },
   {
     name: 'Real-Time Operations Dashboard',
@@ -37,7 +44,7 @@ const features = [
     list: [
       
     ],
-    icon: QueueListIcon,
+    icon: MdSpaceDashboard,
   },
   {
     name: 'Event Intelligence & Automation',
@@ -50,7 +57,7 @@ const features = [
       "Restricted zone breaches",
       "Counterfeit pharmaceuticals"
     ],
-    icon: ShieldCheckIcon,
+    icon: FaBrain,
   },
   {
     name: 'Mobile App (Field Operations)',
@@ -61,7 +68,7 @@ const features = [
       "Enforcements",
       "Asset checks"
     ],
-    icon: CogIcon,
+    icon: IoIosApps,
   },
   {
     name: 'Analytics & Reporting',
@@ -69,7 +76,7 @@ const features = [
     list: [
       
     ],
-    icon: ServerIcon,
+    icon: SiSimpleanalytics,
   },
   {
     name: 'Integrations',
@@ -81,7 +88,7 @@ const features = [
       "Government databases",
       "Invoice/tolling systems"
     ],
-    icon: CogIcon,
+    icon: MdIntegrationInstructions,
   },
 ]
 

@@ -5,6 +5,10 @@ import {
   ShieldCheckIcon,
   ArrowPathIcon,
 } from "@heroicons/react/24/outline";
+import { PiTruckTrailerFill, PiCrane } from "react-icons/pi";
+import { RiPoliceCarFill } from "react-icons/ri";
+import { LuPillBottle } from "react-icons/lu";
+import { MdOutlineGarage, MdOutlineWarehouse } from "react-icons/md";
 import { JSX } from "react";
 import Fleet from "../../public/assets/solutions_fleet.jpg"
 import WareHouse from "../../public/assets/warehouse.jpg"
@@ -12,7 +16,7 @@ import Toll from "../../public/assets/toll.jpg"
 import Security from "../../public/assets/security.jpg"
 import Pharmaceuticals from "../../public/assets/pharmacy.jpg"
 import Construction from "../../public/assets/construction.jpg"
-import { title } from "process";
+
 
 export type Solution = {
   name: string;
@@ -111,7 +115,7 @@ export const solutions: Solution[] = [
     ],
     slug: "fleet-management-logistics",
     href: "/solutions/fleet-management-logistics",
-    icon: ChartBarIcon,
+    icon:PiTruckTrailerFill,
     bgImage: Fleet,
   },
 
@@ -186,7 +190,7 @@ export const solutions: Solution[] = [
     ],
     slug: "construction-heavy-equipment",
     href: "/solutions/construction-heavy-equipment",
-    icon: CursorArrowRippleIcon,
+    icon: PiCrane,
     bgImage: Construction,
   },
   {
@@ -258,7 +262,7 @@ export const solutions: Solution[] = [
     ],
     slug: "military-security",
     href: "/solutions/military-security",
-    icon: ShieldCheckIcon,
+    icon: RiPoliceCarFill,
     bgImage: Security,
   },
   {
@@ -331,7 +335,7 @@ export const solutions: Solution[] = [
     ],
     slug: "healthcare-pharmaceuticals",
     href: "/solutions/healthcare-pharmaceuticals",
-    icon: ShieldCheckIcon,
+    icon: LuPillBottle,
     bgImage: Pharmaceuticals,
   },
   {
@@ -403,7 +407,7 @@ export const solutions: Solution[] = [
     ],
     slug: "smart-cities-tolling",
     href: "/solutions/smart-cities-tolling",
-    icon: ArrowPathIcon,
+    icon: MdOutlineGarage,
     bgImage: Toll,
   },
   {
@@ -476,7 +480,7 @@ export const solutions: Solution[] = [
     ],
     slug: "retail-warehousing-supply-chain",
     href: "/solutions/retail-warehousing-supply-chain",
-    icon: ArrowPathIcon,
+    icon: MdOutlineWarehouse,
     bgImage: WareHouse,
   },
 ];
