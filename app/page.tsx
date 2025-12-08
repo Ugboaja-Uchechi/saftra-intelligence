@@ -4,6 +4,7 @@ import Cta from "./_components/Cta";
 import Industries from "./_components/Industries";
 import ProblemSolve from "./_components/ProblemSolve";
 import { Big_Shoulders } from 'next/font/google';
+import WhyChooseUs from "./_components/WhyChooseUs";
 
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
@@ -49,7 +50,7 @@ export default function Home() {
       </div>
       <Industries />
       <ProblemSolve />
-
+      <WhyChooseUs />
       <Cta />
     </>
 

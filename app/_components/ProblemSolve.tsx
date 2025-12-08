@@ -10,7 +10,7 @@ const bigShoulders = Big_Shoulders({
 
 const ProblemSolve = () => {
   return (
-    <section className='py-6 bg-blue/15'>
+    <section className='py-12 bg-blue/15'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-stretch lg:flex-row flex-col gap-10">
           <div className='lg:flex-[55%]'>
