@@ -6,6 +6,7 @@ import solutions from '@/data/solutions';
 import { LuMail } from "react-icons/lu";
 import { GoDotFill } from "react-icons/go";
 import { Big_Shoulders } from 'next/font/google';
+import Cta from "@/_components/Cta";
 
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
@@ -174,6 +175,8 @@ export default async function SolutionPage({ params }: Props) {
             </ul>
           </aside>
         </section>
+
+        <Cta />
 
         {/* Other Solutions */}
         <section className="mt-16">

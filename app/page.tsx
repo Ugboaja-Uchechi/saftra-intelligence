@@ -1,5 +1,6 @@
 //import HeroVideo from "../public/assets/hero-video.mp4"
 
+import Cta from "./_components/Cta";
 import Industries from "./_components/Industries";
 import ProblemSolve from "./_components/ProblemSolve";
 import { Big_Shoulders } from 'next/font/google';
@@ -48,6 +49,8 @@ export default function Home() {
       </div>
       <Industries />
       <ProblemSolve />
+
+      <Cta />
     </>
 
   );

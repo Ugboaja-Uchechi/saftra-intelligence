@@ -14,6 +14,7 @@ import { SiSimpleanalytics } from "react-icons/si";
 import { MdIntegrationInstructions } from "react-icons/md";
 import { GoDotFill } from 'react-icons/go';
 import { Big_Shoulders } from 'next/font/google';
+import Cta from '@/_components/Cta';
 
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
@@ -26,7 +27,7 @@ const features = [
     name: 'RFID Hardware Layer',
     description: 'High-performance windshield tags, equipment tags, asset labels, handheld readers, fixed gateways, and ruggedised industrial antennas engineered for accuracy.',
     list: [
-      
+
     ],
     icon: IoHardwareChip,
   },
@@ -34,7 +35,7 @@ const features = [
     name: 'AI Identification Engine',
     description: 'Computer vision + machine learning that validates plate numbers, matches RFID events, detects anomalies, and enriches raw data with intelligence.',
     list: [
-      
+
     ],
     icon: GiArtificialIntelligence,
   },
@@ -42,7 +43,7 @@ const features = [
     name: 'Real-Time Operations Dashboard',
     description: 'Live monitoring of vehicles, assets, movements, checkpoints, user access, alerts, and compliance events',
     list: [
-      
+
     ],
     icon: MdSpaceDashboard,
   },
@@ -74,7 +75,7 @@ const features = [
     name: 'Analytics & Reporting',
     description: 'Generate audits, operational reports, compliance summaries, movement heatmaps, and performance KPIs.',
     list: [
-      
+
     ],
     icon: SiSimpleanalytics,
   },
@@ -94,60 +95,64 @@ const features = [
 
 const Product = () => {
   return (
-    <section className='pb-20 pt-30 md:pt-40 bg-background'>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div>
-          <h2 className={`md:text-[calc(1rem+2vw)] text-lg text-black mt-3 uppercase text-center ${bigShoulders.className}`}>The RFID + AI Platform Powering Visibility, Automation & Security Across Industries</h2>
-          <p className='md:text-xl text-[16px] text-gray-500 mb-8 text-center max-w-3xl mx-auto mt-3'>A modular, end-to-end system designed for demanding environments, combining hardware, software, AI, and analytics into a unified solution tailored to your needs.</p>
-        </div>
-        <div className="grid md:grid-cols-4 gap-1.5">
+    <>
+      <section className='pb-10 pt-30 md:pt-40 bg-background'>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div>
-            <Image src={WareHouse} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
+            <h2 className={`md:text-[calc(1rem+2vw)] text-lg text-black mt-3 uppercase text-center ${bigShoulders.className}`}>The RFID + AI Platform Powering Visibility, Automation & Security Across Industries</h2>
+            <p className='md:text-xl text-[16px] text-gray-500 mb-8 text-center max-w-3xl mx-auto mt-3'>A modular, end-to-end system designed for demanding environments, combining hardware, software, AI, and analytics into a unified solution tailored to your needs.</p>
           </div>
-          <div>
-            <Image src={Containers} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
+          <div className="grid md:grid-cols-4 gap-1.5">
+            <div>
+              <Image src={WareHouse} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
+            </div>
+            <div>
+              <Image src={Containers} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
+            </div>
+            <div>
+              <Image src={Toll} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
+            </div>
+            <div>
+              <Image src={ProdWare} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
+            </div>
           </div>
-          <div>
-            <Image src={Toll} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
-          </div>
-          <div>
-            <Image src={ProdWare} alt='' className='max-h-[150px] md:max-h-100 h-full object-cover' />
-          </div>
-        </div>
 
-        <div className='my-10'>
-          <h3 className={`text-3xl text-black ${bigShoulders.className}`}>Platform Overview</h3>
+          <div className='my-10'>
+            <h3 className={`text-3xl text-black ${bigShoulders.className}`}>Platform Overview</h3>
 
-          <div className="mt-10 bg-border p-6 rounded-md">
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map((feature) => (
-                <div key={feature.name} className="pt-6 min-h-80">
-                  <div className="flow-root rounded-lg bg-background px-6 pb-8 h-full">
-                    <div className="-mt-6">
-                      <div>
-                        <span className="inline-flex items-center justify-center rounded-md bg-blue/70 p-3 shadow-lg">
-                          <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                        </span>
+            <div className="mt-10 bg-border p-6 rounded-md">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {features.map((feature) => (
+                  <div key={feature.name} className="pt-6 min-h-80">
+                    <div className="flow-root rounded-lg bg-background px-6 pb-8 h-full">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center rounded-md bg-blue/70 p-3 shadow-lg">
+                            <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                          </span>
+                        </div>
+                        <h3 className={`mt-8 text-2xl font-medium tracking-wide text-black ${bigShoulders.className}`}>{feature.name}</h3>
+                        <p className="mt-5 text-base text-black/90">{feature.description}</p>
+                        <ul className='mt-4'>
+                          {feature.list.map((item, index) => (
+                            <li key={index} className="text-gray-700 text-base font-medium flex gap-2 items-center">
+                              <GoDotFill className='text-blue' />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <h3 className={`mt-8 text-2xl font-medium tracking-wide text-black ${bigShoulders.className}`}>{feature.name}</h3>
-                      <p className="mt-5 text-base text-black/90">{feature.description}</p>
-                      <ul className='mt-4'>
-                        {feature.list.map((item, index) => (
-                          <li key={index} className="text-gray-700 text-base font-medium flex gap-2 items-center">
-                            <GoDotFill className='text-blue' />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Cta />
+    </>
+
   )
 }
 

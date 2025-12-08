@@ -133,7 +133,7 @@ const Header = () => {
                   <div className="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
                     <p className="text-base font-medium text-black">Interested?</p>
                     <button
-                      className="ml-4 whitespace-nowrap inline-flex items-center justify-center lg:px-12 lg:py-3 px-2 py-4 border border-transparent rounded-md lg:rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
+                      className="ml-4 whitespace-nowrap inline-flex items-center justify-center lg:px-12 lg:py-3 px-2 py-4 border border-transparent rounded-md lg:rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/70 outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
                       onClick={joinWaitlistNav}
                     >
                       Join Waitlist
@@ -157,7 +157,7 @@ const Header = () => {
                       <div className="flex items-center justify-between">
                         <div>
                           <Link href="/">
-                            <h1 className={`${bigShoulders.className} text-xl outline-none`}>Saftra Intelligence</h1>
+                            <h1 className={`${bigShoulders.className} text-xl outline-none focus:outline-none`}>Saftra Intelligence</h1>
                             <span className="sr-only">Home</span>
                           </Link>
                         </div>
@@ -209,7 +209,7 @@ const Header = () => {
                       </div>
                       <div>
                         <button
-                          className="w-full mt-2 whitespace-nowrap inline-flex items-center justify-center px-12 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/50 hover:text-black outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
+                          className="w-full mt-2 whitespace-nowrap inline-flex items-center justify-center px-12 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-blue hover:bg-blue/70  outline-none focus:outline-none cursor-pointer transition-colors duration-150 ease-in-out"
                           onClick={() => {
                             joinWaitlistNav();
                             close();

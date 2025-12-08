@@ -8,12 +8,6 @@ const bigShoulders = Big_Shoulders({
   weight: ['400', '700', '900'],
 });
 
-
-//a short into to the product page plus link would have this design
-// <div className='bg-midnight rounded-lg p-6'>
-//   <h2 className='text-orange'>Problems</h2>
-// </div>
-
 const ProblemSolve = () => {
   return (
     <section className='py-6 bg-blue/15'>
