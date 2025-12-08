@@ -2,7 +2,6 @@
 
 import { Fragment, useEffect } from 'react'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel, Transition } from '@headlessui/react'
-import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import { useRouter } from 'next/navigation';

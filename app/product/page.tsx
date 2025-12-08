@@ -4,7 +4,6 @@ import ProdWare from "../../public/assets/prod-ware.jpg";
 import Toll from "../../public/assets/toll.jpg"
 import Containers from "../../public/assets/product-container.jpg"
 import Image from 'next/image';
-import { ShieldCheckIcon, LockClosedIcon, CloudArrowUpIcon, CogIcon, ServerIcon, QueueListIcon } from '@heroicons/react/20/solid';
 import { IoHardwareChip } from "react-icons/io5";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { MdSpaceDashboard } from "react-icons/md";
@@ -15,11 +14,31 @@ import { MdIntegrationInstructions } from "react-icons/md";
 import { GoDotFill } from 'react-icons/go';
 import { Big_Shoulders } from 'next/font/google';
 import Cta from '@/_components/Cta';
+import { Metadata } from 'next';
 
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
 });
+
+export const metadata: Metadata = {
+  title: "Product - RFID + AI Platform | Saftra Intelligence",
+  description:
+    "Explore Saftra Intelligence's unified RFID + AI platform for asset tracking, access control, automation, analytics, and real-time operational visibility.",
+  keywords: [
+    "RFID platform",
+    "AI tracking software",
+    "asset management system",
+    "automation platform",
+    "RFID dashboard",
+    "Saftra Intelligence product"
+  ],
+  openGraph: {
+    title: "Saftra Intelligence Product - RFID + AI Platform",
+    description:
+      "One platform for RFID tracking, computer vision intelligence, automation, and enterprise analytics.",
+  },
+};
 
 
 const features = [

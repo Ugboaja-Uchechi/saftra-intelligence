@@ -1,16 +1,33 @@
 "use client"
 
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import email from "../../public/assets/Email.svg";
 import Image from 'next/image';
 import { Big_Shoulders } from 'next/font/google';
+import { Metadata } from "next";
 
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
 });
+
+export const metadata: Metadata = {
+  title: "Contact Us - Saftra Intelligence",
+  description:
+    "Get in touch with Saftra Intelligence for inquiries about RFID, AI, logistics automation, tolling, intelligent transportation systems, or enterprise solutions.",
+  openGraph: {
+    title: "Contact Saftra Intelligence",
+    description:
+      "Reach out to our team for consultations, partnerships, enterprise solutions, and support.",
+    url: "https://saftraintelligence.com/contact",
+  },
+  alternates: {
+    canonical: "https://saftraintelligence.com/contact",
+  },
+};
+
 
 const Contact = () => {
   const [userDetails, setUserDetails] = useState({

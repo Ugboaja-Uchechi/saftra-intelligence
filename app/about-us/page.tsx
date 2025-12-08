@@ -2,11 +2,30 @@ import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import { Big_Shoulders } from 'next/font/google';
 import Cta from '@/_components/Cta';
+import { Metadata } from 'next';
 
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
 });
+
+export const metadata: Metadata = {
+  title: "About Us - Saftra Intelligence",
+  description:
+    "Saftra Intelligence is building Africa's leading RFID + AI infrastructure for smart cities, logistics, security, healthcare, warehousing, and critical operations.",
+  keywords: [
+    "about Saftra Intelligence",
+    "RFID company Africa",
+    "AI technology Africa",
+    "smart city solutions",
+    "enterprise tracking systems"
+  ],
+  openGraph: {
+    title: "About Saftra Intelligence",
+    description:
+      "Learn about our mission, technology, and vision for building the future of RFID + AI in Africa.",
+  },
+};
 
 
 const About = () => {

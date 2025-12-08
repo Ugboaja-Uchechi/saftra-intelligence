@@ -1,15 +1,8 @@
 // src/data/solutions.ts
-import {
-  ChartBarIcon,
-  CursorArrowRippleIcon,
-  ShieldCheckIcon,
-  ArrowPathIcon,
-} from "@heroicons/react/24/outline";
 import { PiTruckTrailerFill, PiCrane } from "react-icons/pi";
 import { RiPoliceCarFill } from "react-icons/ri";
 import { LuPillBottle } from "react-icons/lu";
 import { MdOutlineGarage, MdOutlineWarehouse } from "react-icons/md";
-import { JSX } from "react";
 import Fleet from "../../public/assets/solutions_fleet.jpg"
 import WareHouse from "../../public/assets/warehouse.jpg"
 import Toll from "../../public/assets/toll.jpg"
