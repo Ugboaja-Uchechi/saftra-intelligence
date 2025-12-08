@@ -53,10 +53,9 @@ export default async function SolutionPage({ params }: Props) {
   const otherSolutions = solutions.filter((s) => s.slug !== slug);
 
   return (
-    <main className="pt-40 pb-20 relative bg-background">
+    <main className="pt-40 pb-20  bg-background">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="bg-cover bg-center absolute inset-0 h-screen lg:h-[70vh] bg-no-repeat" style={{ backgroundImage: `url(${current.bgImage.src})` }}>
+        <div className="bg-cover bg-center relative -mt-40 h-screen lg:h-[70vh] bg-no-repeat" style={{ backgroundImage: `url(${current.bgImage.src})` }}>
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
 
@@ -73,9 +72,11 @@ export default async function SolutionPage({ params }: Props) {
         </div>
         {/* Hero */}
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
 
         {/* Page body */}
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-120 lg:mt-96">
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8 lg:py-12">
           <article className="lg:col-span-2">
             <div>
               <div>
